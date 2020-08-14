@@ -1,0 +1,116 @@
+body {
+  width: 800px;
+  display: block;
+  margin: 0 auto;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+p {
+  text-align: left;
+  font-size: 22px;
+  font-weight: 600;
+  color: #10171a;
+  margin-left: 20px;
+  position: relative;
+  bottom: 170px;
+  color: #292841;
+}
+
+svg {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 90px;
+  left: 142px;
+}
+
+i {
+  color: #05dabd;
+}
+
+.container {
+  display: block;
+  text-align: center;
+  border: thick;
+  border-radius: 30px;
+  padding: 35px;
+  margin: 30px;
+  background-image: linear-gradient(15deg, #225770 0%, #5fb1a7 100%);
+}
+
+.enter-city {
+  text-align: right;
+  position: relative;
+  top: 20px;
+  right: 20px;
+  padding: 5px;
+}
+
+.current-city h1 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: left;
+  position: relative;
+  left: 20px;
+  bottom: 180px;
+  color: #292841;
+}
+
+.first-left-line {
+  width: 260px;
+  color: #3e6069;
+  background-color: #3e6069;
+  height: 2px;
+  position: relative;
+  bottom: 190px;
+  left: 8px;
+}
+
+.second-left-line {
+  width: 200px;
+  color: #3e6069;
+  background-color: #3e6069;
+  height: 2px;
+  position: relative;
+  bottom: 166px;
+  left: 10px;
+}
+
+.update {
+  text-align: right;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: oblique;
+  padding: 5px;
+  position: relative;
+  top: -5;
+  right: 18px;
+  color: #292841;
+}
+
+.bottom-group {
+  text-align: center;
+  margin: 50px 0px 12px 0px;
+  padding-top: 30px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.long-middle-line {
+  background-color: #292841;
+  color: #292841;
+  height: 2px;
+  margin: 32px;
+}
+
+.weekdays {
+  margin-bottom: 15px;
+}
+
+.weekday-icons {
+  font-size: 45px;
+}
+
+.weekday-temp {
+  margin-top: 15px;
+}
