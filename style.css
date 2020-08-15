@@ -114,3 +114,11 @@ i {
 .weekday-temp {
   margin-top: 15px;
 }
+
+.gitHub-link {
+  text-align: left;
+  position: relative;
+  left: 30px;
+  bottom: 20px;
+  font-weight: 500;
+}
