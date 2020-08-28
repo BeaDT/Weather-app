@@ -43,6 +43,8 @@ function displayWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", `response.data.weather[0].main`);
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function search(city) {
@@ -71,10 +73,31 @@ function getYourLocation(event) {
   navigator.geolocation.getCurrentPosition(searchPosition);
 }
 
-search("Manchester");
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 
 let searchButton = document.querySelector("#city-search-form");
 searchButton.addEventListener("submit", citySearchSubmit);
 
 let currentLocationButton = document.querySelector("#your-location-button");
 currentLocationButton.addEventListener("click", getYourLocation);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+let celsiusTemperature = null;
+
+search("Manchester");
