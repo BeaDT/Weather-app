@@ -26,16 +26,18 @@ let day = days[currentTime.getDay()];
 currentDate.innerHTML = `${day}, ${hours}:${minutes}`;
 
 function displayWeather(response) {
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+
   document.querySelector("#chosen-city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
@@ -107,6 +109,9 @@ function searchPosition(position) {
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let apiUrl = `${apiEndpoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function getYourLocation(event) {
