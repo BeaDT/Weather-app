@@ -28,6 +28,12 @@ i {
   color: #05dabd;
 }
 
+h3 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
 .container {
   display: block;
   text-align: center;
@@ -93,16 +99,16 @@ i {
   margin: 32px;
 }
 
-.weekdays {
-  margin-bottom: 15px;
-}
-
-.weekday-icons {
-  font-size: 45px;
+.daily-hours {
+  text-align: center;
+  margin: 10px 10px 12px -10px;
+  padding-top: 10px;
 }
 
 .weekday-temp {
-  margin-top: 15px;
+  font-size: 21px;
+  font-weight: bold;
+  margin-left: 15px;
 }
 
 .gitHub-link {
